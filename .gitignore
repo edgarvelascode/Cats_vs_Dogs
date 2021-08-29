@@ -1,0 +1,6 @@
+### Intellij Idea ###
+.idea
+
+### Python ###
+__pycache__/
+venv/
