@@ -22,16 +22,10 @@ run = True
 while run:
     clock.tick(FPS)
     draw_bg()
-
     player_one.update()
-
     player_two.update()
-
     player_one.draw()
     player_two.draw()
-
-
-
 
     #update and draw groups
     bullet_group.update()
