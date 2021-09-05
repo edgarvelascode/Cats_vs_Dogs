@@ -1,4 +1,7 @@
 import pygame
+
+from Player import *
+
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
@@ -13,6 +16,10 @@ FPS = 60
 x = 200
 y = 200
 
+Corg_Special_img = pygame.image.load(f'Bullet/dog.png')
+Cat_Special_img = pygame.image.load(f'Bullet/cat.png')
+Corg_Special = pygame.transform.scale(Corg_Special_img, (200,100))
+Cat_Special = pygame.transform.scale(Cat_Special_img, (200,100))
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
@@ -37,6 +44,8 @@ moving_down2 = False
 shoot2 = False
 specials2 = False
 specials_thrown2 = False
+
+cat_bullet = pygame.image.load(f'Bullet/cat.png').convert_alpha()
 
 
 

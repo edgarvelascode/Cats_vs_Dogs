@@ -2,13 +2,18 @@ import pygame
 import os
 import pygame.sprite
 import pygame.display
-from SpriteClass import *
+from Player import *
 from config import *
 
-Corg_Special_img = pygame.image.load(f'Bullet/dog.png')
-Cat_Special_img = pygame.image.load(f'Bullet/cat.png')
-Corg_Special = pygame.transform.scale(Corg_Special_img, (200,100))
-Cat_Special = pygame.transform.scale(Cat_Special_img, (200,100))
+# create sprite groups
+bullet_group = pygame.sprite.Group()
+bullet_group2 = pygame.sprite.Group()
+
+player_one = Player('cat', 200, 350, 5, 30, 10, 3)
+player_two = Player('corgi', 1200, 350, 7, 150, 10, 3)
+
+# Specials group
+specials_group = pygame.sprite.Group()
 
 pygame.init()
 
@@ -128,7 +133,7 @@ while run:
             player_two.update_action(5)  # 1 means run
         else:
             player_two.update_action(4)  # 0 is idle
-        player_two.move2(moving_left2, moving_right2, moving_up2, moving_down2 )
+        player_two.move(moving_left2, moving_right2, moving_up2, moving_down2 )
 
 
         pygame.display.update()
